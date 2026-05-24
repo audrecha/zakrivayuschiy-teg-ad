@@ -335,7 +335,7 @@
       <button
         type="button"
         class="save-button animated-button"
-        onclick="document.getElementById('dialog-floppy').showModal();"
+        onclick="window['dialog-floppy'].showModal();"
         aria-controls="dialog-floppy"
       >
         <svg class="floppy-icon" viewBox="0 0 44 44" aria-hidden="true">
@@ -354,14 +354,13 @@
           </svg>
           <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <form method="dialog">
-          <button
-            type="submit"
-            class="ok-button animated-button"
-          >
-            <span class="button__text">ОК</span>
-          </button>
-        </form>
+        <button
+          type="button"
+          class="ok-button animated-button"
+          onclick="window['dialog-floppy'].close();"
+        >
+          <span class="button__text">ОК</span>
+        </button>
       </div>
     </dialog>
 
