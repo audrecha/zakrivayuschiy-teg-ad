@@ -334,7 +334,8 @@
 
       <button
         type="button"
-        class="save-button animated-button"
+        class="dialog-button animated-button"
+        onclick="window['dialog-floppy'].showModal();"
         aria-controls="dialog-floppy"
       >
         <svg class="floppy-icon" viewBox="0 0 44 44" aria-hidden="true">
@@ -353,12 +354,15 @@
           </svg>
           <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button
-          type="button"
-          class="ok-button animated-button"
-        >
-          <span class="button__text">ОК</span>
-        </button>
+        <div class="ok__dialog-button">
+          <button
+            type="button"
+            class="animated-button"
+            onclick="window['dialog-floppy'].close();"
+          >
+            <span class="button__text ok">OK</span>
+          </button>
+        </div>
       </div>
     </dialog>
 

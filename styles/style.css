@@ -203,10 +203,10 @@ main {
   z-index: 1;
 }
 
-.save-button {
+.dialog-button {
   inline-size: 335px;
   block-size: 55px;
-  padding-inline: 18px;
+  gap: 8px;
   margin-block: 50px 100px;
 }
 
@@ -255,9 +255,12 @@ dialog::backdrop {
   line-height: 1.5;
 }
 
-.ok-button {
+.ok__dialog-button button {
   inline-size: 100%;
-  block-size: 38px;
+}
+
+.ok {
+  padding-block: 11px;
 }
 
 /* Image filters */

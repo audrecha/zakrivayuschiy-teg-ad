@@ -1,11 +1,15 @@
 const dialog = document.getElementById('dialog-floppy');
-const saveButton = document.querySelector('.save-button');
-const okButton = document.querySelector('.ok-button');
+const saveButton = document.querySelector('.dialog-button');
+const okButton = document.querySelector('.ok__dialog-button button');
 
-saveButton.addEventListener('click', function () {
-  dialog.showModal();
-});
+if (saveButton) {
+  saveButton.addEventListener('click', function () {
+    dialog.showModal();
+  });
+}
 
-okButton.addEventListener('click', function () {
-  dialog.close();
-});
+if (okButton) {
+  okButton.addEventListener('click', function () {
+    dialog.close();
+  });
+}
