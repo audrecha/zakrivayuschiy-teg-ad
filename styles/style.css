@@ -194,13 +194,21 @@ main {
   border-color: var(--accent-color);
 }
 
-.floppy-icon {
+.floppy-svg {
   inline-size: 21px;
   block-size: 21px;
   fill: var(--background-color);
   mix-blend-mode: difference;
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
+}
+
+.floppy_svg {
+  fill: var(--background-color);
+  mix-blend-mode: difference;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .dialog-button {
@@ -244,12 +252,6 @@ dialog::backdrop {
   gap: 20px;
 }
 
-.dialog-floppy {
-  inline-size: 39px;
-  block-size: 39px;
-  flex-shrink: 0;
-  fill: var(--accent-color);
-}
 
 .dialog-text {
   max-inline-size: 234px;
@@ -307,13 +309,13 @@ dialog::backdrop {
     inset-inline-end: 11px;
   }
 
-  .save-button {
+  .dialog-button {
     inline-size: 306px;
     block-size: 84px;
     flex-direction: column;
   }
 
-  .floppy-icon {
+  .floppy-svg {
     inline-size: 28px;
     block-size: 28px;
   }
