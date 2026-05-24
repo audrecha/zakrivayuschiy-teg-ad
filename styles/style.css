@@ -208,6 +208,7 @@ main {
   block-size: 55px;
   gap: 8px;
   margin-block: 50px 100px;
+  justify-content: center;
 }
 
 dialog::backdrop {
