@@ -13,4 +13,313 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--card-text-weight);
+  font-size: var(--base-font-size);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-width {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+  line-height: 100%;
+  padding-block: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem) clamp(1.25rem, 1.15rem + 0.423vw, 1.563rem);
+  padding-inline: clamp(0.875rem, -1.469rem + 10vw, 7.531rem);
+  margin-block: clamp(6rem, 5.297rem + 3vw, 8rem);
+}
+
+.header-logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-end: 20px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  white-space: nowrap;
+}
+
+main {
+  display: flex;
+  gap: var(--card-gap);
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__section {
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+
+.card-title {
+  padding: 5px 10px;
+  font-variation-settings: "wght" var(--card-title-weight);
+  line-height: 1.21;
+  border-block-end: 2px solid var(--accent-color);
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.section__card-image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-label {
+  position: absolute;
+  font-family: var(--accent-font);
+  font-size: var(--accent-font-size);
+  text-transform: uppercase;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  mix-blend-mode: hard-light;
+  text-shadow: var(--text-shadow);
+  opacity: 0.5;
+  z-index: 1;
+  color: white;
+}
+
+@supports ((text-stroke: 1px var(--shadow-color)) or (-webkit-text-stroke: 1px var(--shadow-color))) {
+  .card-label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+  }
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px;
+  border-block-start: 2px solid var(--accent-color);
+}
+
+.section__card-paragraph {
+  line-height: 1.167;
+}
+
+.button-container {
+  display: flex;
+  align-self: flex-end;
+  gap: 12px;
+}
+
+.animated-button {
+  border: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--background-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
+}
+
+.animated-button:hover::before {
+  translate: 0%;
+}
+
+.animated-button:focus {
+  outline: none;
+}
+
+.animated-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button__text {
+  font-size: var(--accent-font-size);
+  font-family: var(--accent-font);
+  mix-blend-mode: difference;
+  color: var(--background-color);
+  position: relative;
+  z-index: 1;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  block-size: 38px;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.floppy-icon {
+  inline-size: 21px;
+  block-size: 21px;
+  fill: var(--background-color);
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
+}
+
+.save-button {
+  inline-size: 335px;
+  block-size: 55px;
+  padding-inline: 18px;
+  margin-block: 50px 100px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog {
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--accent-color);
+  padding-inline: 30px;
+  padding-block: 30px;
+  font-size: var(--accent-font-size);
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color);
+  max-inline-size: 357px;
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-floppy {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+  fill: var(--accent-color);
+}
+
+.dialog-text {
+  max-inline-size: 234px;
+  line-height: 1.5;
+}
+
+.ok-button {
+  inline-size: 100%;
+  block-size: 38px;
+}
+
+/* Image filters */
+
+.img-filter-0 {
+  filter: saturate(35%) contrast(85%) brightness(90%) sepia(30%) hue-rotate(-10deg) grayscale(15%);
+}
+
+.img-filter-1 {
+  filter: brightness(108%) contrast(95%) saturate(200%) hue-rotate(20deg);
+}
+
+.img-filter-2 {
+  filter: sepia(60%) hue-rotate(330deg) saturate(120%);
+}
+
+.img-filter-3 {
+  filter: hue-rotate(31deg) saturate(128%) contrast(107%);
+}
+
+.img-filter-4 {
+  filter: invert(76%);
+}
+
+.img-filter-5 {
+  filter: sepia(100%);
+}
+
+.img-filter-6 {
+  filter: blur(4px) brightness(96%) hue-rotate(98deg) saturate(141%) contrast(75%);
+}
+
+.img-filter-7 {
+  filter: grayscale(80%) contrast(120%);
+}
+
+@media (width <= 375px) {
+  .header {
+    padding-inline: 14px;
+  }
+
+  .card-label {
+    inset-inline-end: 11px;
+  }
+
+  .save-button {
+    inline-size: 306px;
+    block-size: 84px;
+    flex-direction: column;
+  }
+
+  .floppy-icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog {
+    padding-inline: 40px;
+    max-inline-size: 341px;
+  }
+
+  .dialog-text {
+    max-inline-size: 198px;
+  }
 }
