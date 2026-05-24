@@ -354,13 +354,14 @@
           </svg>
           <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button
-          type="button"
-          class="ok-button animated-button"
-          onclick="document.getElementById('dialog-floppy').close();"
-        >
-          <span class="button__text">ОК</span>
-        </button>
+        <form method="dialog">
+          <button
+            type="submit"
+            class="ok-button animated-button"
+          >
+            <span class="button__text">ОК</span>
+          </button>
+        </form>
       </div>
     </dialog>
 
