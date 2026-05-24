@@ -332,32 +332,24 @@
         </div>
       </section>
 
-      <button
-        type="button"
-        class="dialog-button animated-button"
-        aria-controls="dialog-floppy"
-      >
-        <svg class="floppy-icon" viewBox="0 0 44 44" aria-hidden="true">
+      <button class="dialog-button animated-button" type="button" onclick="window['dialog-floppy'].showModal();" aria-controls="dialog-floppy">
+        <svg class="floppy-svg" viewBox="0 0 44 44">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-
     </main>
 
     <dialog id="dialog-floppy" class="dialog">
       <div class="dialog-container">
         <div class="dialog-item">
-          <svg class="dialog-floppy" viewBox="0 0 44 44" aria-hidden="true">
+          <svg viewBox="0 0 40 40" class="floppy_svg floppy-svg">
             <use href="./svg/floppy.svg#floppy" />
           </svg>
-          <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+          <span class="dialog-text">Вставьте дискету, чтобы продолжить</span>
         </div>
         <div class="ok__dialog-button">
-          <button
-            type="button"
-            class="animated-button"
-          >
+          <button class="animated-button" type="button" onclick="window['dialog-floppy'].close();">
             <span class="button__text ok">OK</span>
           </button>
         </div>
@@ -365,6 +357,5 @@
     </dialog>
 
     <script src="./scripts/like.js"></script>
-    <script src="./scripts/dialog.js"></script>
   </body>
 </html>
